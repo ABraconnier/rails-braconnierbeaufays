@@ -1,5 +1,4 @@
 class PagesController < ApplicationController
-
   before_action :get_clients
 
   def home
