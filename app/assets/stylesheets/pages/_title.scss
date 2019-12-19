@@ -1,0 +1,78 @@
+h1 {
+  font-family: 'Plaax 1 Sathonay';
+  font-size: 24vw;
+  font-weight: normal;
+  line-height: 0.7;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+#bastien, #chloe {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: 'DTL Fleischmann Display';
+  font-size: 3vw;
+  font-weight: normal;
+  font-style: italic;
+  transition-duration: 4s;
+  opacity: 0;
+}
+
+#title {
+  display: flex;
+  position: fixed;
+  top: 30vh;
+  width: 100%;
+  transition-duration: 1s;
+  background-color: white;
+  z-index: 10;
+}
+
+.names {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.first {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.blue-font {
+  color: $blue;
+}
+
+nav {
+  font-family: 'Maax Mono';
+  text-align: right;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 50px solid black;
+}
+
+.first-down {
+  height: 10%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
