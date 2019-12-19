@@ -16,6 +16,9 @@
 // const imagePath = (name) => images(name, true)
 import "core-js/stable";
 import "regenerator-runtime/runtime";
+import {namesAppear} from '../components/names.js'
 import { titleFixed } from '../components/title.js';
+import {bbAppear} from '../components/bb.js';
+namesAppear();
 titleFixed();
-console.log('Hello World from Webpacker')
+bbAppear();
