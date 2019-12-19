@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_action :get_clients
+  before_action :get_clients, :get_description
 
   def home
   end
@@ -12,5 +12,9 @@ class PagesController < ApplicationController
 
   def get_clients
     @clients = Client.all
+  end
+
+  def get_description
+    @description = Description.first
   end
 end

@@ -1,9 +1,12 @@
 @import "title";
+@import "description";
 
 body {
   margin: 0;
 }
 
-.test {
-  height: 100vh
+
+// This is the basic layout for the admin dashboard
+.container-admin {
+  padding: 5vw;
 }
