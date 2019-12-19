@@ -1,0 +1,37 @@
+#bb {
+  background-color: $grey;
+  display: flex;
+}
+
+.bblogo {
+  width: 70px;
+  opacity: 0;
+  transition-duration: 2s;
+}
+
+.bbgroup {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  width: 100%;
+  grid-row-gap: 1vw;
+  grid-column-gap: 0.5vw;
+}
+
+.subgroup {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-column-gap: 1vw;
+  grid-row-gap: 0.5vw;
+}
+
+.left-block {
+  justify-self: end;
+}
+
+.right-block {
+  justify-self: start;
+}
