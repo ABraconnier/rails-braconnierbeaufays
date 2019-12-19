@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     delete 'sign_out', to: 'devise/sessions#destroy', as: :destroy_user_session
   end
   resources :clients, only: [:create, :update, :destroy]
+  resources :descriptions, only: [:update]
   root to: 'pages#home'
   get 'admin', to: 'pages#admin'
 end

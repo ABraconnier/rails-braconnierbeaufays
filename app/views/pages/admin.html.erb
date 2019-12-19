@@ -1,2 +1,15 @@
-<p>test</p>
+<div class="container-admin"><p>Hello ! This is your interface where you can add, update or delete clients from your landing page. You can also update your description. Sorry for the web design, it is supposed to be seen only by you :)</p>
+<h2>Description</h2>
+<ul>
+  <li>If you want to have some italic words in the text, please wrap them up with those tags: '&lt;em&gt;&lt;/em&gt;'</li>
+<!--   <li>If you want to have some bold words in the text, please wrap them up with those tags: '&lt;strong&gt;&lt;/strong&gt;'</li>
+ -->  <li>If you want to have some underlined words in the text, please wrap them up with those tags: '&lt;u&gt;&lt;/u&gt;'</li>
+</ul>
+<%= form_for(@description) do |f| %>
+  <%= f.text_area :name, :cols => 40, :rows => 15 %>
+
+  <%= f.submit %>
+<% end %>
+<h2>Clients</h2>
 <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+</div>
