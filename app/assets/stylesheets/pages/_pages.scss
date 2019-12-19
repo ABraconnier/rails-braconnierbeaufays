@@ -1,10 +1,14 @@
 @import "title";
 @import "description";
+@import "services";
 
 body {
   margin: 0;
 }
 
+#bb, #clients, #services, #description {
+  height: 100vh;
+}
 
 // This is the basic layout for the admin dashboard
 .container-admin {

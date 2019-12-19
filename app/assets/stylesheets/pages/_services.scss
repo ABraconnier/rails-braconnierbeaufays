@@ -1,0 +1,37 @@
+#services {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+h2 {
+  font-family: 'Plaax 1 Sathonay';
+  font-size: 5vw;
+  text-transform: uppercase;
+}
+
+#services ul {
+  font-family: 'Maax Mono';
+  font-size: 20px;
+  list-style: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+li {
+  margin: 0.5vw 0;
+}
+
+#colored-block {
+  background-color: $light-blue;
+  padding: 5vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+#hands {
+  width: 20vw;
+  height: 20vw;
+}
