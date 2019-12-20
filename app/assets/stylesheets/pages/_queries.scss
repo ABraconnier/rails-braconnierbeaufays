@@ -1,0 +1,53 @@
+@media (max-height: 600px) {
+#description {
+   height: 800px;
+  }
+#clients {
+  height: 800px;
+}
+}
+
+@media (max-width: 750px) {
+#description p{
+  font-size: 15px;
+  width: 65%;
+  padding: 10vh 0 10vh 3vw;;
+  }
+#description, #services, #clients {
+  height: fit-content;
+}
+
+#services ul {
+  padding: 30vw 0 30vw 3vw;
+}
+
+#bastien, #chloe {
+  font-size: 6vw;
+}
+
+#contacts {
+  flex-direction: row;
+  height: fit-content;
+}
+
+#contacts p {
+  font-size: 15px;
+}
+
+#logo {
+  align-self: flex-start;
+}
+
+h2 {
+  font-size: 50px;
+  margin: 0;
+}
+
+nav {
+  display: none;
+}
+
+.arrow-down {
+  display: none;
+}
+}

@@ -1,0 +1,23 @@
+#contacts {
+  padding: 5vw;
+  margin: 0;
+  color: white;
+  height: 80vh;
+  display: flex;
+  justify-content: space-between;
+  background-color: $blue;
+}
+
+#contacts p {
+  font-family: 'Maax Mono';
+  font-size: 20px;
+}
+
+#contacts h1 {
+  margin: 0;
+  font-size: 17vw;
+}
+
+#logo {
+  align-self: flex-end;
+}
