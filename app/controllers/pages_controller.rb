@@ -6,6 +6,7 @@ class PagesController < ApplicationController
 
   def admin
     authenticate_user!
+    @new_client = Client.new
   end
 
   private

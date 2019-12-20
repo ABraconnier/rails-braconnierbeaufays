@@ -2,6 +2,7 @@
   "name": "rails-braconnierbeaufays",
   "private": true,
   "dependencies": {
+    "@glidejs/glide": "^3.4.1",
     "@rails/webpacker": "4.2.2"
   },
   "devDependencies": {

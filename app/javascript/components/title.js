@@ -1,6 +1,6 @@
 const titleFixed = () => {
-  window.onscroll = () => {
-    const title = document.querySelector('#title');
+  const title = document.querySelector('#title');
+  const whereIsTheTitle = () => {
     if(window.scrollY <= window.innerHeight / 2) {
       title.style.top = '30vh';
       document.getElementById('bastien').style.transitionDuration = '4s';
@@ -15,5 +15,6 @@ const titleFixed = () => {
       document.getElementById('chloe').style.opacity = '0';
     }
   };
+  window.addEventListener('scroll', () => {whereIsTheTitle()});
 };
 export { titleFixed };

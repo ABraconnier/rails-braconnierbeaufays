@@ -19,6 +19,18 @@ import "regenerator-runtime/runtime";
 import {namesAppear} from '../components/names.js'
 import { titleFixed } from '../components/title.js';
 import {bbAppear} from '../components/bb.js';
+import Glide from '@glidejs/glide'
 namesAppear();
 titleFixed();
 bbAppear();
+const config = {
+  type: 'carousel',
+  perView: 3,
+  items: document.getElementsByClassName('anchor_slide'),
+  breakpoints: {1300:
+      { perView: 2 },
+    900:
+      { perView: 1 }
+  },
+};
+new Glide('.glide', config).mount();
