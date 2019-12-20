@@ -5,7 +5,7 @@
         <div class="glide__track" data-glide-el="track">
           <ul class="glide__slides">
             <% @clients.each do |client|%>
-              <li class="glide__slide"><a class="anchor_slide" href="#<%= client.id %>"><%= cl_image_tag client.photo, height: 200, width: 200, class: "logo-clients" %></a></li>
+              <li class="glide__slide">  <%= link_to (cl_image_tag(client.photo, height: 200, width: 200)), root_path(anchor: client.id)  %> </li>
             <% end %>
           </ul>
         </div>
