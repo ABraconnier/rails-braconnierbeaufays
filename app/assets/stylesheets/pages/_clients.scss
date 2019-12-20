@@ -1,0 +1,87 @@
+#clients {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#clients h2 {
+  padding: 3vw;
+  margin-bottom: 0;
+}
+
+.container {
+  width: 80vw;
+  margin: 1vw auto;
+}
+
+i {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.glide__arrow--left {
+  left: 0em;
+}
+
+.glide__arrow--right {
+  right: 0em;
+}
+
+.glide__slide {
+  text-align: center;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 25vw auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 25%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.content {
+  font-family: 'Maax Mono';
+  font-size: 20;
+}
+
+h4 {
+  font-family: 'DTL Fleischmann Display';
+  font-size: 3vw;
+  font-weight: normal;
+  font-style: italic;
+  margin: 2vw 0;
+}
+
+.close {
+  font-size: 3vw;
+}

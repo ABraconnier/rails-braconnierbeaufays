@@ -5,29 +5,25 @@
         <div class="glide__track" data-glide-el="track">
           <ul class="glide__slides">
             <% @clients.each do |client|%>
-              <%= cl_image_tag client.photo, height: 200, width: 200, crop: :fill, class: "logo-clients" %>
+              <li class="glide__slide"><a class="anchor_slide" href="#<%= client.id %>"><%= cl_image_tag client.photo, height: 200, width: 200, class: "logo-clients" %></a></li>
             <% end %>
-            <!-- <li class="glide__slide"><a class="anchor_slide" href="#popup1"><img src="https://source.unsplash.com/random/200x200" class="logo-clients" alt=""></a></li>
-            <li class="glide__slide"><a class="anchor_slide" href="#popup2"><img src="https://source.unsplash.com/random/200x200" class="logo-clients" alt=""></a></li>
-            <li class="glide__slide"><a class="anchor_slide" href="#popup3"><img src="https://source.unsplash.com/random/200x200" class="logo-clients" alt=""></a></li> -->
           </ul>
         </div>
-      </div>
-    </div>
-</div>
-<!--         <div class="glide__arrows" data-glide-el="controls">
+        <div class="glide__arrows" data-glide-el="controls">
           <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><i class="arrow left"></i></button>
           <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><i class="arrow right"></i></button>
         </div>
       </div>
     </div>
-
-    <div id="popup1" class="overlay">
-      <div class="popup">
-        <a class="close" href="#clients">&times;</a>
-        <h4>Here i am</h4>
-        <div class="content">
-          I am the first client
+    <% @clients.each do |client| %>
+      <div id="<%= client.id %>" class="overlay">
+        <div class="popup">
+          <a class="close" href="#clients">&times;</a>
+          <h4><%= client.name %></h4>
+          <div class="content">
+            <%= client.description %>
+          </div>
         </div>
       </div>
-    </div> -->
+    <% end %>
+</div>
