@@ -1,11 +1,14 @@
 #services {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  h2 {
+    margin-top: 0;
+  }
 }
 
 h2 {
   font-family: 'Plaax 1 Sathonay';
-  font-size: 5vw;
+  font-size: 7vw;
   text-transform: uppercase;
 }
 
