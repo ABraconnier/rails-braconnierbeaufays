@@ -4,10 +4,6 @@
 @import "bb";
 @import "clients";
 
-// html {
-//   scroll-behavior: smooth;
-// }
-
 body {
   margin: 0;
 }
@@ -19,4 +15,29 @@ body {
 // This is the basic layout for the admin dashboard
 .container-admin {
   padding: 5vw;
+}
+
+.forms-update {
+  margin-bottom: 50px;
+
+  .input {
+    margin-bottom: 10px;
+  }
+
+.new-client {
+  margin-right: 100px;
+}
+
+  a {
+  text-decoration: underline;
+  color: red;
+  }
+}
+
+h5 {
+  font-size: 25px;
+}
+
+.clients-crud {
+  display: flex;
 }

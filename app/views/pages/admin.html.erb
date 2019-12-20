@@ -1,15 +1,47 @@
 <div class="container-admin"><p>Hello ! This is your interface where you can add, update or delete clients from your landing page. You can also update your description. Sorry for the web design, it is supposed to be seen only by you :)</p>
-<h2>Description</h2>
-<ul>
-  <li>If you want to have some italic words in the text, please wrap them up with those tags: '&lt;em&gt;&lt;/em&gt;'</li>
-<!--   <li>If you want to have some bold words in the text, please wrap them up with those tags: '&lt;strong&gt;&lt;/strong&gt;'</li>
- -->  <li>If you want to have some underlined words in the text, please wrap them up with those tags: '&lt;u&gt;&lt;/u&gt;'</li>
-</ul>
-<%= form_for(@description) do |f| %>
-  <%= f.text_area :name, :cols => 40, :rows => 15 %>
+  <h4>Description</h4>
+  <ul>
+    <li>If you want to have some italic words in the text, please wrap them up with those tags: '&lt;em&gt;&lt;/em&gt;'</li>
+  <!--   <li>If you want to have some bold words in the text, please wrap them up with those tags: '&lt;strong&gt;&lt;/strong&gt;'</li>
+   -->  <li>If you want to have some underlined words in the text, please wrap them up with those tags: '&lt;u&gt;&lt;/u&gt;'</li>
+  </ul>
+  <%= form_for(@description) do |f| %>
+    <%= f.text_area :name, :cols => 40, :rows => 15 %>
 
-  <%= f.submit %>
-<% end %>
-<h2>Clients</h2>
-<%= link_to "Log out", destroy_user_session_path, method: :delete %>
+    <%= f.submit %>
+  <% end %>
+  <h4>Clients</h4>
+  <div class="clients-crud">
+  <div class="new-client">
+    <h5>Create</h5>
+      <div class="forms-update">
+        <%= simple_form_for @new_client do |f| %>
+            <%= f.input :name, as: :text , :input_html => {maxlength: 100} %>
+            <%= f.input :description, as: :text, :input_html => {:cols => 40, :rows => 7} %>
+            <%= f.input :photo %>
+            <%= f.input :photo_cache, as: :hidden %>
+          <%= f.submit %>
+        <% end %>
+      </div>
+       <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+  </div>
+  <div class="edit-client">
+    <h5>Update</h5>
+    <% @clients.each do |client| %>
+      <div class="forms-update">
+        <%= simple_form_for client do |f| %>
+            <%= f.input :name, as: :text , :input_html => {maxlength: 100} %>
+            <%= f.input :description, as: :text, :input_html => {:cols => 40, :rows => 7} %>
+            <%= cl_image_tag(client.photo, height: 200, width: 200) %>
+            <%= f.input :photo %>
+            <%= f.input :photo_cache, as: :hidden %>
+          <%= f.submit %>
+        <% end %>
+      <%= link_to "Click here to delete this client", client_path(client),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+      </div>
+    <% end %>
+  </div>
+  </div>
 </div>
